@@ -10,7 +10,7 @@ function App() {
 
   useEffect(()=>{
     axios.get(`${API_URL}${API_KEY}`).then(({data})=>{
-      console.log(data);
+      setData(data);
     }).catch(err=>{
       console.log(err);
     })
