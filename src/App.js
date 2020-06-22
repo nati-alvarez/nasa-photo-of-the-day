@@ -4,7 +4,7 @@ import "./App.css";
 
 import Title from './components/Title';
 import Date from './components/Date';
-import Photo from './components/Photo';
+import Media from './components/Media';
 import Copyright from './components/Copyright';
 import Description from './components/Description';
 
@@ -30,7 +30,7 @@ function App() {
         <h1>NASA APOD</h1>
         <Title title={data.title}/>
         <Date date={data.date}/>
-        <Photo photo={data.hdurl}/>
+        <Media mediaType={data.media_type} mediaLink={data.hdurl}/>
         <Copyright owner={data.copyright}/>
         <Description description={data.explanation}/>
       </>}
