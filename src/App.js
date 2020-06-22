@@ -5,6 +5,7 @@ import "./App.css";
 import Title from './components/Title';
 import Date from './components/Date';
 import Photo from './components/Photo';
+import Copyright from './components/Copyright';
 import Description from './components/Description';
 
 const API_KEY = "k5sSIJGot1xNH0t5AafhbkAW49Cb6MyJ8YHZ1OTD";
@@ -30,6 +31,7 @@ function App() {
         <Title title={data.title}/>
         <Date date={data.date}/>
         <Photo photo={data.hdurl}/>
+        <Copyright owner={data.copyright}/>
         <Description description={data.explanation}/>
       </>}
     </div>
