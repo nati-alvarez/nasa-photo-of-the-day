@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 import Title from './components/Title';
+import Photo from './components/Photo';
 
 const API_KEY = "k5sSIJGot1xNH0t5AafhbkAW49Cb6MyJ8YHZ1OTD";
 const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
@@ -25,6 +26,7 @@ function App() {
       <>
         <h1>NASA APOD</h1>
         <Title title={data.title}/>
+        <Photo photo={data.hdurl}/>
       </>}
     </div>
   );
