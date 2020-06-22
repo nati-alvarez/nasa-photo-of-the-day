@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./App.css";
 
+import SelectImage from "./components/SelectImage";
 import Title from './components/Title';
 import Date from './components/Date';
 import Media from './components/Media';
@@ -13,6 +14,8 @@ const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
 
 function App() {
   const [data, setData] = useState();
+  const [date, setDate] = useState();
+  console.log(date);
 
   useEffect(()=>{
     axios.get(`${API_URL}${API_KEY}`).then(({data})=>{
@@ -27,6 +30,7 @@ function App() {
       {!data && <p>Loading...</p>}
       {data &&
       <>
+        <SelectImage changeDate={setDate}/>
         <h1>NASA APOD</h1>
         <Title title={data.title}/>
         <Date date={data.date}/>
