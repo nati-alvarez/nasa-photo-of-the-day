@@ -2,6 +2,6 @@ import React from "react";
 
 export default function Description({description}){
     return (
-        <p>{description}</p>
+        <p className="description">{description}</p>
     );
 }
