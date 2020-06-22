@@ -14,16 +14,15 @@ const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
 
 function App() {
   const [data, setData] = useState();
-  const [date, setDate] = useState();
-  console.log(date);
+  const [date, setDate] = useState("");
 
   useEffect(()=>{
-    axios.get(`${API_URL}${API_KEY}`).then(({data})=>{
+    axios.get(`${API_URL}${API_KEY}&date=${date}`).then(({data})=>{
       setData(data);
     }).catch(err=>{
       console.log(err);
     })
-  }, []);
+  }, [date]);
 
   return (
     <div className="App">
