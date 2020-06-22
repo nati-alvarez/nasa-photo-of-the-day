@@ -17,7 +17,7 @@
   transform: rotate(-1deg);
 }
 
-#apod img {
+#apod img, #apod iframe {
   object-fit: cover;
   height: 100%;
   width: 100%;
