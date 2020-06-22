@@ -2,6 +2,33 @@
   text-align: center;
 }
 
+input[type=date]{
+  font-size: 1.4rem;
+  position: absolute;
+  top: 4vh;
+  right: 5vh;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+input[type="date"]:after {
+  padding: 0 10px;
+  content: "\270E";
+}
+
 #apod {
   max-width: 600px;
   width: 80%;
