@@ -51,7 +51,7 @@ function App() {
         <AppTitle>NASA APOD</AppTitle>
         <Title title={data.title}/>
         <Date date={data.date}/>
-        {/* <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url}/> */}
+        <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url}/>
         <Copyright owner={data.copyright}/>
         <Description description={data.explanation}/>
       </>}
