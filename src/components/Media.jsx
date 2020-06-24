@@ -26,13 +26,19 @@ const Video = styledComponent.iframe`
     border: 1px solid black;
 `
 
-export default function Media({mediaLink, mediaType}){
+const Copyright = styledComponent.address`
+    color: black;
+    text-align: center;
+`;
+
+export default function Media({mediaLink, mediaType, owner}){
     let media;
     if(mediaType === "image")  media = <Image alt="nasa astronomy photo of the day" src={mediaLink}/>;
     else media = <Video src={mediaLink}/>;
     return (
         <APOD id="apod">
             {media}
+            <Copyright>{owner}</Copyright>
         </APOD>
     );
 }

@@ -28,6 +28,7 @@ const AppTitle = styledComponents.h1`
   letter-spacing: -20px;
   word-spacing: 20px;
   text-align: center;
+  margin: 2vh 0;
 `;
 
 function App() {
@@ -51,8 +52,7 @@ function App() {
         <AppTitle>NASA APOD</AppTitle>
         <Title title={data.title}/>
         <Date date={data.date}/>
-        <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url}/>
-        <Copyright owner={data.copyright}/>
+        <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url} owner={data.copyright}/>
         <Description description={data.explanation}/>
       </>}
     </AppContainer>
