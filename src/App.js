@@ -3,6 +3,10 @@ import axios from "axios";
 import moment from "moment";
 import "./App.css";
 
+//Material UI
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
+
 import SelectImage from "./components/SelectImage";
 import Title from './components/Title';
 import Date from './components/Date';
@@ -26,18 +30,20 @@ function App() {
   }, [date]);
 
   return (
-    <div className="App">
-      {!data && <p>Loading...</p>}
-      {data &&
-      <>
-        <SelectImage changeDate={setDate}/>
-        <h1>NASA APOD</h1>
-        <Title title={data.title}/>
-        <Date date={data.date}/>
-        <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url} owner={data.copyright}/>
-        <Description description={data.explanation}/>
-      </>}
-    </div>
+    <CssBaseline>
+      <Container className="App">
+        {!data && <p>Loading...</p>}
+        {data &&
+        <>
+          <SelectImage changeDate={setDate}/>
+          <h1>NASA APOD</h1>
+          <Title title={data.title}/>
+          <Date date={data.date}/>
+          <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url} owner={data.copyright}/>
+          <Description description={data.explanation}/>
+        </>}
+      </Container>
+    </CssBaseline>
   );
 }
 
