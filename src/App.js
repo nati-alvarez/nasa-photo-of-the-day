@@ -7,7 +7,6 @@ import SelectImage from "./components/SelectImage";
 import Title from './components/Title';
 import Date from './components/Date';
 import Media from './components/Media';
-import Copyright from './components/Copyright';
 import Description from './components/Description';
 
 const API_KEY = "k5sSIJGot1xNH0t5AafhbkAW49Cb6MyJ8YHZ1OTD";
