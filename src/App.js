@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import moment from "moment";
 import styledComponents from "styled-components";
 import "./App.css";
 
@@ -32,7 +33,7 @@ const AppTitle = styledComponents.h1`
 
 function App() {
   const [data, setData] = useState();
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(moment().format("YYYY-MM-DD"));
 
   useEffect(()=>{
     axios.get(`${API_URL}${API_KEY}&date=${date}`).then(({data})=>{
