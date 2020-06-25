@@ -6,6 +6,7 @@ import "./App.css";
 //Material UI
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
 
 import SelectImage from "./components/SelectImage";
 import Title from './components/Title';
@@ -36,7 +37,7 @@ function App() {
         {data &&
         <>
           <SelectImage changeDate={setDate}/>
-          <h1>NASA APOD</h1>
+          <Typography component="h1" variant="h3">NASA APOD</Typography>
           <Title title={data.title}/>
           <Date date={data.date}/>
           <Media mediaType={data.media_type} mediaLink={data.hdurl || data.url} owner={data.copyright}/>
