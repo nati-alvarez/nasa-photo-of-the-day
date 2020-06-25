@@ -1,7 +1,9 @@
 import React from "react";
 
+import Typography from "@material-ui/core/Typography";
+
 export default function Title({title}){
     return (
-    <h2>{title}</h2>
+        <Typography variant="h5" component="h2">{title}</Typography>
     )
 }

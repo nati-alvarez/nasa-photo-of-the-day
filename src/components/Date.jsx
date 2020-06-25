@@ -1,7 +1,8 @@
 import React from 'react';
+import Typography from "@material-ui/core/Typography";
 
 export default function Date({date}){
     return (
-        <p className="date">{date}</p>
+        <Typography gutterBottom={true} color="textSecondary" className="date">{date}</Typography>
     )
 }
